@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EPSViewController : UIViewController
+@interface EPSExampleViewController : UIViewController
 
 @end

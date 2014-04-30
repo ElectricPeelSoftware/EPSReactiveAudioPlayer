@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261B50BB57F744748AA721DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D8B9AAB69445BCB4F805DF /* libPods.a */; };
 		D0F46EF519099DB300A5EEDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF419099DB300A5EEDA /* Foundation.framework */; };
 		D0F46EF719099DB300A5EEDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF619099DB300A5EEDA /* CoreGraphics.framework */; };
 		D0F46EF919099DB300A5EEDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF819099DB300A5EEDA /* UIKit.framework */; };
@@ -14,26 +15,13 @@
 		D0F46F0119099DB300A5EEDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F46F0019099DB300A5EEDA /* main.m */; };
 		D0F46F0519099DB300A5EEDA /* EPSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F46F0419099DB300A5EEDA /* EPSAppDelegate.m */; };
 		D0F46F0819099DB300A5EEDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F46F0619099DB300A5EEDA /* Main.storyboard */; };
-		D0F46F0B19099DB300A5EEDA /* EPSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F46F0A19099DB300A5EEDA /* EPSViewController.m */; };
+		D0F46F0B19099DB300A5EEDA /* EPSExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F46F0A19099DB300A5EEDA /* EPSExampleViewController.m */; };
 		D0F46F0D19099DB300A5EEDA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F46F0C19099DB300A5EEDA /* Images.xcassets */; };
-		D0F46F1419099DB300A5EEDA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46F1319099DB300A5EEDA /* XCTest.framework */; };
-		D0F46F1519099DB300A5EEDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF419099DB300A5EEDA /* Foundation.framework */; };
-		D0F46F1619099DB300A5EEDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF819099DB300A5EEDA /* UIKit.framework */; };
-		D0F46F1E19099DB300A5EEDA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0F46F1C19099DB300A5EEDA /* InfoPlist.strings */; };
-		D0F46F2019099DB300A5EEDA /* ReactiveAudioPlayerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F46F1F19099DB300A5EEDA /* ReactiveAudioPlayerTests.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		D0F46F1719099DB300A5EEDA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D0F46EE919099DB300A5EEDA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D0F46EF019099DB300A5EEDA;
-			remoteInfo = ReactiveAudioPlayer;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		45E771CF78C04B9DA4C00109 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		49D8B9AAB69445BCB4F805DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F46EF119099DB300A5EEDA /* ReactiveAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F46EF419099DB300A5EEDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0F46EF619099DB300A5EEDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +33,10 @@
 		D0F46F0319099DB300A5EEDA /* EPSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSAppDelegate.h; sourceTree = "<group>"; };
 		D0F46F0419099DB300A5EEDA /* EPSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSAppDelegate.m; sourceTree = "<group>"; };
 		D0F46F0719099DB300A5EEDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0F46F0919099DB300A5EEDA /* EPSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSViewController.h; sourceTree = "<group>"; };
-		D0F46F0A19099DB300A5EEDA /* EPSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSViewController.m; sourceTree = "<group>"; };
+		D0F46F0919099DB300A5EEDA /* EPSExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPSExampleViewController.h; sourceTree = "<group>"; };
+		D0F46F0A19099DB300A5EEDA /* EPSExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPSExampleViewController.m; sourceTree = "<group>"; };
 		D0F46F0C19099DB300A5EEDA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		D0F46F1219099DB300A5EEDA /* ReactiveAudioPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactiveAudioPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F46F1319099DB300A5EEDA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		D0F46F1B19099DB300A5EEDA /* ReactiveAudioPlayerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReactiveAudioPlayerTests-Info.plist"; sourceTree = "<group>"; };
-		D0F46F1D19099DB300A5EEDA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		D0F46F1F19099DB300A5EEDA /* ReactiveAudioPlayerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactiveAudioPlayerTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,16 +47,7 @@
 				D0F46EF719099DB300A5EEDA /* CoreGraphics.framework in Frameworks */,
 				D0F46EF919099DB300A5EEDA /* UIKit.framework in Frameworks */,
 				D0F46EF519099DB300A5EEDA /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D0F46F0F19099DB300A5EEDA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0F46F1419099DB300A5EEDA /* XCTest.framework in Frameworks */,
-				D0F46F1619099DB300A5EEDA /* UIKit.framework in Frameworks */,
-				D0F46F1519099DB300A5EEDA /* Foundation.framework in Frameworks */,
+				261B50BB57F744748AA721DD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,9 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				D0F46EFA19099DB300A5EEDA /* ReactiveAudioPlayer */,
-				D0F46F1919099DB300A5EEDA /* ReactiveAudioPlayerTests */,
 				D0F46EF319099DB300A5EEDA /* Frameworks */,
 				D0F46EF219099DB300A5EEDA /* Products */,
+				45E771CF78C04B9DA4C00109 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				D0F46EF119099DB300A5EEDA /* ReactiveAudioPlayer.app */,
-				D0F46F1219099DB300A5EEDA /* ReactiveAudioPlayerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +79,7 @@
 				D0F46EF619099DB300A5EEDA /* CoreGraphics.framework */,
 				D0F46EF819099DB300A5EEDA /* UIKit.framework */,
 				D0F46F1319099DB300A5EEDA /* XCTest.framework */,
+				49D8B9AAB69445BCB4F805DF /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -115,8 +90,8 @@
 				D0F46F0319099DB300A5EEDA /* EPSAppDelegate.h */,
 				D0F46F0419099DB300A5EEDA /* EPSAppDelegate.m */,
 				D0F46F0619099DB300A5EEDA /* Main.storyboard */,
-				D0F46F0919099DB300A5EEDA /* EPSViewController.h */,
-				D0F46F0A19099DB300A5EEDA /* EPSViewController.m */,
+				D0F46F0919099DB300A5EEDA /* EPSExampleViewController.h */,
+				D0F46F0A19099DB300A5EEDA /* EPSExampleViewController.m */,
 				D0F46F0C19099DB300A5EEDA /* Images.xcassets */,
 				D0F46EFB19099DB300A5EEDA /* Supporting Files */,
 			);
@@ -134,24 +109,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D0F46F1919099DB300A5EEDA /* ReactiveAudioPlayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				D0F46F1F19099DB300A5EEDA /* ReactiveAudioPlayerTests.m */,
-				D0F46F1A19099DB300A5EEDA /* Supporting Files */,
-			);
-			path = ReactiveAudioPlayerTests;
-			sourceTree = "<group>";
-		};
-		D0F46F1A19099DB300A5EEDA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D0F46F1B19099DB300A5EEDA /* ReactiveAudioPlayerTests-Info.plist */,
-				D0F46F1C19099DB300A5EEDA /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0F46F2319099DB300A5EEDA /* Build configuration list for PBXNativeTarget "ReactiveAudioPlayer" */;
 			buildPhases = (
+				AF254440664A4EFA825773B4 /* Check Pods Manifest.lock */,
 				D0F46EED19099DB300A5EEDA /* Sources */,
 				D0F46EEE19099DB300A5EEDA /* Frameworks */,
 				D0F46EEF19099DB300A5EEDA /* Resources */,
+				66249FF2F3954D1CBF056769 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,24 +131,6 @@
 			productReference = D0F46EF119099DB300A5EEDA /* ReactiveAudioPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D0F46F1119099DB300A5EEDA /* ReactiveAudioPlayerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D0F46F2619099DB300A5EEDA /* Build configuration list for PBXNativeTarget "ReactiveAudioPlayerTests" */;
-			buildPhases = (
-				D0F46F0E19099DB300A5EEDA /* Sources */,
-				D0F46F0F19099DB300A5EEDA /* Frameworks */,
-				D0F46F1019099DB300A5EEDA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D0F46F1819099DB300A5EEDA /* PBXTargetDependency */,
-			);
-			name = ReactiveAudioPlayerTests;
-			productName = ReactiveAudioPlayerTests;
-			productReference = D0F46F1219099DB300A5EEDA /* ReactiveAudioPlayerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -199,11 +140,6 @@
 				CLASSPREFIX = EPS;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Electric Peel, LLC";
-				TargetAttributes = {
-					D0F46F1119099DB300A5EEDA = {
-						TestTargetID = D0F46EF019099DB300A5EEDA;
-					};
-				};
 			};
 			buildConfigurationList = D0F46EEC19099DB300A5EEDA /* Build configuration list for PBXProject "ReactiveAudioPlayer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -219,7 +155,6 @@
 			projectRoot = "";
 			targets = (
 				D0F46EF019099DB300A5EEDA /* ReactiveAudioPlayer */,
-				D0F46F1119099DB300A5EEDA /* ReactiveAudioPlayerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,44 +170,53 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0F46F1019099DB300A5EEDA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66249FF2F3954D1CBF056769 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F46F1E19099DB300A5EEDA /* InfoPlist.strings in Resources */,
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-/* End PBXResourcesBuildPhase section */
+		AF254440664A4EFA825773B4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0F46EED19099DB300A5EEDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F46F0B19099DB300A5EEDA /* EPSViewController.m in Sources */,
+				D0F46F0B19099DB300A5EEDA /* EPSExampleViewController.m in Sources */,
 				D0F46F0119099DB300A5EEDA /* main.m in Sources */,
 				D0F46F0519099DB300A5EEDA /* EPSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0F46F0E19099DB300A5EEDA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D0F46F2019099DB300A5EEDA /* ReactiveAudioPlayerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D0F46F1819099DB300A5EEDA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D0F46EF019099DB300A5EEDA /* ReactiveAudioPlayer */;
-			targetProxy = D0F46F1719099DB300A5EEDA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D0F46EFD19099DB300A5EEDA /* InfoPlist.strings */ = {
@@ -289,14 +233,6 @@
 				D0F46F0719099DB300A5EEDA /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		D0F46F1C19099DB300A5EEDA /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0F46F1D19099DB300A5EEDA /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -374,6 +310,7 @@
 		};
 		D0F46F2419099DB300A5EEDA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E771CF78C04B9DA4C00109 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +324,7 @@
 		};
 		D0F46F2519099DB300A5EEDA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45E771CF78C04B9DA4C00109 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -395,46 +333,6 @@
 				INFOPLIST_FILE = "ReactiveAudioPlayer/ReactiveAudioPlayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		D0F46F2719099DB300A5EEDA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ReactiveAudioPlayer.app/ReactiveAudioPlayer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ReactiveAudioPlayer/ReactiveAudioPlayer-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "ReactiveAudioPlayerTests/ReactiveAudioPlayerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		D0F46F2819099DB300A5EEDA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ReactiveAudioPlayer.app/ReactiveAudioPlayer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "ReactiveAudioPlayer/ReactiveAudioPlayer-Prefix.pch";
-				INFOPLIST_FILE = "ReactiveAudioPlayerTests/ReactiveAudioPlayerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -457,14 +355,7 @@
 				D0F46F2519099DB300A5EEDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		D0F46F2619099DB300A5EEDA /* Build configuration list for PBXNativeTarget "ReactiveAudioPlayerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D0F46F2719099DB300A5EEDA /* Debug */,
-				D0F46F2819099DB300A5EEDA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
