@@ -29,7 +29,7 @@
     
     self.viewModel = [EPSPlayerViewModel new];
     
-    self.viewModel.audioURL = [NSURL URLWithString:@"http://mp3catholiccourses.s3.amazonaws.com/01%20Letters%20-%20Introduction.mp3"];
+    self.viewModel.audioURL = [NSURL URLWithString:AUDIO_URL];
     
     self.toggleButton.rac_command = self.viewModel.togglePlayPauseCommand;
     
