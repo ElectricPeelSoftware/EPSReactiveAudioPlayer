@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface EPSPlayerViewModel : NSObject
 
 @property (nonatomic) NSURL *audioURL;
+
+@property (readonly) AVPlayer *player;
 
 @property (readonly) NSTimeInterval duration;
 
