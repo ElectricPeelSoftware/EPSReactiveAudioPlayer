@@ -90,7 +90,7 @@
                                     RACObserve(self, currentTime),
                                     RACObserve(self, duration) ];
                                     
-    RAC([MPNowPlayingInfoCenter defaultCenter], nowPlayingInfo) = [[RACSignal
+    RAC([MPNowPlayingInfoCenter defaultCenter], nowPlayingInfo) = [RACSignal
         combineLatest:nowPlayingSignals
         reduce:^NSDictionary *(NSString *title, NSString *artist, NSString *albumTitle, MPMediaItemArtwork *artwork, NSNumber *currentTime, NSNumber *duration){
             NSMutableDictionary *dictionary = [NSMutableDictionary new];
@@ -103,7 +103,7 @@
             if (duration) dictionary[MPMediaItemPropertyPlaybackDuration] = duration;
             
             return dictionary;
-        }] logAll];
+        }];
     
     @weakify(self);
     

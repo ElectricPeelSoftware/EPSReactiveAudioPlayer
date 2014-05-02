@@ -13,10 +13,14 @@
 @implementation AVPlayer (RAC)
 
 - (RACSignal *)rac_duration {
-    return [RACObserve(self, currentItem.asset.duration)
+    return [[RACObserve(self, currentItem.asset.duration)
         map:^NSNumber *(NSValue *durationValue) {
             CMTime time = durationValue.CMTimeValue;
             return[AVPlayer rac_timeIntervalFromTime:time];
+        }]
+        map:^NSNumber *(NSNumber *duration) {
+            if (duration == nil) return @0;
+            else return duration;
         }];
 }
 
