@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "EPSReactiveAudioPlayer"
-  s.version          = "0.2.1"
+  s.version          = "0.2.2"
   s.summary          = "A view model which manages an AVPlayer object."
 
   s.homepage         = "https://github.com/ElectricPeelSoftware/EPSReactiveAudioPlayer"

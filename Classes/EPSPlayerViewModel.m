@@ -158,7 +158,9 @@
         return [RACSignal empty];
     }];
     
-    RACSignal *toggleEnabled = [RACSignal merge:@[ self.playCommand.enabled, self.pauseCommand.enabled ]];
+    RACSignal *toggleEnabled = [RACObserve(self, player) map:^NSNumber *(AVPlayer *player) {
+        return @(player != nil);
+    }];
     
     self.togglePlayPauseCommand = [[RACCommand alloc] initWithEnabled:toggleEnabled signalBlock:^RACSignal *(id input) {
         @strongify(self);
