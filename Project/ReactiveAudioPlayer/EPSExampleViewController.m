@@ -29,7 +29,11 @@
     
     self.viewModel = [EPSPlayerViewModel new];
     
-    self.viewModel.audioURL = [NSURL URLWithString:AUDIO_URL];
+    self.viewModel.audioArtist = @"Example Artist";
+    self.viewModel.audioTitle = @"Example Title";
+    self.viewModel.audioAlbumTitle = @"Example Album";
+    self.viewModel.audioURL = [NSURL URLWithString:@"http://mp3catholiccourses.s3.amazonaws.com/01%20Letters%20-%20Introduction.mp3"];
+    self.viewModel.audioArtwork = [UIImage imageNamed:@"AlbumArt"];
     
     self.toggleButton.rac_command = self.viewModel.togglePlayPauseCommand;
     
@@ -76,6 +80,21 @@
             }
         }];
     [self.toggleButton rac_liftSelector:@selector(setTitle:forState:) withSignals:buttonTitleSignal, [RACSignal return:@(UIControlStateNormal)], nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+    [self becomeFirstResponder];
+}
+
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    [self.viewModel handleRemoteControlEvent:event];
+}
+
+- (BOOL)canBecomeFirstResponder {
+    return YES;
 }
 
 @end

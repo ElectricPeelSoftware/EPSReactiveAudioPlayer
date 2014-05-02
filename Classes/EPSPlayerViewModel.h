@@ -14,6 +14,13 @@
 
 @property (nonatomic) NSURL *audioURL;
 
+@property (nonatomic) NSString *audioTitle;
+@property (nonatomic) NSString *audioArtist;
+@property (nonatomic) NSString *audioAlbumTitle;
+@property (nonatomic) UIImage *audioArtwork;
+
+// Read-only
+
 @property (readonly) AVPlayer *player;
 
 @property (readonly) NSTimeInterval duration;
@@ -37,5 +44,7 @@
 @property (nonatomic, getter = isSeeking) BOOL seeking;
 
 - (void)seekToTime:(NSTimeInterval)time;
+
+- (void)handleRemoteControlEvent:(UIEvent *)event;
 
 @end

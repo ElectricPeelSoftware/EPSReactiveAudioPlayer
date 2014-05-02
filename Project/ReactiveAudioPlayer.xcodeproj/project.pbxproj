@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		261B50BB57F744748AA721DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D8B9AAB69445BCB4F805DF /* libPods.a */; };
+		D04F44711913D7F100C61F4B /* AlbumArt.png in Resources */ = {isa = PBXBuildFile; fileRef = D04F44701913D7F100C61F4B /* AlbumArt.png */; };
 		D0F46EF519099DB300A5EEDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF419099DB300A5EEDA /* Foundation.framework */; };
 		D0F46EF719099DB300A5EEDA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF619099DB300A5EEDA /* CoreGraphics.framework */; };
 		D0F46EF919099DB300A5EEDA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F46EF819099DB300A5EEDA /* UIKit.framework */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		45E771CF78C04B9DA4C00109 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		49D8B9AAB69445BCB4F805DF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04F44701913D7F100C61F4B /* AlbumArt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlbumArt.png; sourceTree = "<group>"; };
 		D0F46EF119099DB300A5EEDA /* ReactiveAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F46EF419099DB300A5EEDA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0F46EF619099DB300A5EEDA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,6 +103,7 @@
 		D0F46EFB19099DB300A5EEDA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D04F44701913D7F100C61F4B /* AlbumArt.png */,
 				D0F46EFC19099DB300A5EEDA /* ReactiveAudioPlayer-Info.plist */,
 				D0F46EFD19099DB300A5EEDA /* InfoPlist.strings */,
 				D0F46F0019099DB300A5EEDA /* main.m */,
@@ -167,6 +170,7 @@
 				D0F46F0D19099DB300A5EEDA /* Images.xcassets in Resources */,
 				D0F46EFF19099DB300A5EEDA /* InfoPlist.strings in Resources */,
 				D0F46F0819099DB300A5EEDA /* Main.storyboard in Resources */,
+				D04F44711913D7F100C61F4B /* AlbumArt.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,10 +318,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveAudioPlayer/ReactiveAudioPlayer-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveAudioPlayer/ReactiveAudioPlayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B151BD9D-525D-4F5A-BD60-F5F7324B16EC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -328,10 +334,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ReactiveAudioPlayer/ReactiveAudioPlayer-Prefix.pch";
 				INFOPLIST_FILE = "ReactiveAudioPlayer/ReactiveAudioPlayer-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B151BD9D-525D-4F5A-BD60-F5F7324B16EC";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

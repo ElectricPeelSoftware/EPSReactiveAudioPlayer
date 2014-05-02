@@ -9,6 +9,7 @@
 #import "EPSPlayerViewModel.h"
 
 #import "AVPlayer+RAC.h"
+#import <MediaPlayer/MediaPlayer.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 
 @interface EPSPlayerViewModel ()
@@ -26,7 +27,12 @@
 - (id)init {
     self = [super init];
     if (self == nil) return nil;
-
+    
+    NSError *setCategoryError = nil;
+    NSError *activationError = nil;
+    [[AVAudioSession sharedInstance] setActive:YES error:&activationError];
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:&setCategoryError];
+    
     RAC(self, player) = [RACObserve(self, audioURL)
         map:^AVPlayer *(NSURL *audioURL) {
             if (audioURL == nil) {
@@ -70,6 +76,34 @@
         map:^NSNumber *(NSNumber *rate) {
             return @(rate.doubleValue > 0);
         }];
+    
+    RACSignal *artworkSignal = [RACObserve(self, audioArtwork) map:^MPMediaItemArtwork *(UIImage *image) {
+        if (image == nil) return nil;
+        
+        return [[MPMediaItemArtwork alloc] initWithImage:image];
+    }];
+    
+    NSArray *nowPlayingSignals = @[ RACObserve(self, audioTitle),
+                                    RACObserve(self, audioArtist),
+                                    RACObserve(self, audioAlbumTitle),
+                                    artworkSignal,
+                                    RACObserve(self, currentTime),
+                                    RACObserve(self, duration) ];
+                                    
+    RAC([MPNowPlayingInfoCenter defaultCenter], nowPlayingInfo) = [[RACSignal
+        combineLatest:nowPlayingSignals
+        reduce:^NSDictionary *(NSString *title, NSString *artist, NSString *albumTitle, MPMediaItemArtwork *artwork, NSNumber *currentTime, NSNumber *duration){
+            NSMutableDictionary *dictionary = [NSMutableDictionary new];
+            
+            if (title) dictionary[MPMediaItemPropertyTitle] = title;
+            if (artist) dictionary[MPMediaItemPropertyArtist] = artist;
+            if (albumTitle) dictionary[MPMediaItemPropertyAlbumTitle] = albumTitle;
+            if (artwork) dictionary[MPMediaItemPropertyArtwork] = artwork;
+            if (currentTime) dictionary[MPNowPlayingInfoPropertyElapsedPlaybackTime] = currentTime;
+            if (duration) dictionary[MPMediaItemPropertyPlaybackDuration] = duration;
+            
+            return dictionary;
+        }] logAll];
     
     @weakify(self);
     
@@ -162,6 +196,19 @@
     }
     
     return [NSString stringWithFormat:@"%d:%@", minutes, secondsString];
+}
+
+#pragma mark - UIResponder Methods
+
+- (void)handleRemoteControlEvent:(UIEvent *)event {
+    if (event.type != UIEventTypeRemoteControl) return;
+    
+    if (event.subtype == UIEventSubtypeRemoteControlPlay) {
+        [self.playCommand execute:nil];
+    }
+    else if (event.subtype == UIEventSubtypeRemoteControlPause) {
+        [self.pauseCommand execute:nil];
+    }
 }
 
 @end
