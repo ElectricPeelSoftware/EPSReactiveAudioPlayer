@@ -43,7 +43,13 @@
 
 + (NSNumber *)rac_timeIntervalFromTime:(CMTime)time {
     if (CMTIME_IS_VALID(time)) {
-        return @(CMTimeGetSeconds(time));
+        NSNumber *number = @(CMTimeGetSeconds(time));
+        if ([number isEqual:[NSDecimalNumber notANumber]]) {
+            return @0;
+        }
+        else {
+            return number;
+        }
     }
     else {
         return nil;
